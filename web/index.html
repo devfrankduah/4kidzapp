@@ -1,59 +1,60 @@
 <!DOCTYPE html>
-<html>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<html lang="en">
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="chat_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>chat_app</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank's Web App 💻</title>
+    <link rel="stylesheet" href="./Style.css">
 </head>
+
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
-      });
-    });
-  </script>
+    <div class="container" id="content01">
+        <div class="img-slider">
+            <h2>Welcome to 4kidz App</h2>
+            <p>We are a community together promoting the safety of kids on the internet. </p>
+            <img src="./Images/Img1-removebg-preview.png" alt="img">
+        </div>
+        <div class="content">
+            <h2>Get Started</h2>
+            <p>Already have account ? <a href="#" id="login">Sign In </a></p>
+            <form id="form">
+                <label for="name" id="nlabel">Name</label> <br>
+                <input type="text" id="fname" placeholder="John " autocomplete="off"> <br>
+                <label for="email" id="elabel">Email</label> <br>
+                <input type="email" id="eemail" placeholder="frank@gmail.com" autocomplete="off"> <br>
+                <label for="password" id="plabel">Password</label> <br>
+                <input type="password" name="password" id="lpassword"> <br>
+                <button type="submit" onclick="UserRegister()" id="btn">Sign Up </button>
+            </form>
+
+        </div>
+    </div>
+    <div class="container display" id="content02">
+        <div class="img-slider">
+            <h2>Welcome to 4kidz App</h2>
+            <p>We are a community together promoting the safety of kids on the internet. </p>
+            <img src="./Images/undraw_mobile_login_ikmv-removebg-preview.png" alt="img" class="sign-img">
+        </div>
+        <div class="content">
+            <h2>Get Started</h2>
+            <p>Don't have account ? <a href="#" id="sign-up">Sign up </a></p>
+            <form action="" id="form">
+                <label for="email" id="elabel">Email</label> <br>
+                <input type="email" id="eemail" placeholder="frank@gmail.com" autocomplete="off"> <br>
+                <label for="password" id="plabel">Password</label> <br>
+                <input type="password" name="password" id="lpassword"> <br>
+                <button type="submit" onclick="SignIn()" id="btn1">Log-In </button>
+            </form>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="server.js"></script>
 </body>
+
 </html>
